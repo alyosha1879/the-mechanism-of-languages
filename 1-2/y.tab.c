@@ -450,7 +450,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    29,    29,    30,    33,    39,    40,    44,    45,    46
+       0,    29,    29,    30,    33,    39,    40,    44,    48,    52
 };
 #endif
 
@@ -1236,8 +1236,32 @@ yyreduce:
 #line 1237 "y.tab.c" /* yacc.c:1646  */
     break;
 
+  case 7:
+#line 45 "calc.y" /* yacc.c:1646  */
+    {
+                      (yyval.double_value) = (yyvsp[-2].double_value) - (yyvsp[0].double_value);
+                    }
+#line 1245 "y.tab.c" /* yacc.c:1646  */
+    break;
 
-#line 1241 "y.tab.c" /* yacc.c:1646  */
+  case 8:
+#line 49 "calc.y" /* yacc.c:1646  */
+    {
+                      (yyval.double_value) = (yyvsp[-2].double_value) * (yyvsp[0].double_value);
+                    }
+#line 1253 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 9:
+#line 53 "calc.y" /* yacc.c:1646  */
+    {
+                      (yyval.double_value) = (yyvsp[-2].double_value) / (yyvsp[0].double_value);
+                    }
+#line 1261 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+
+#line 1265 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1465,7 +1489,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 48 "calc.y" /* yacc.c:1906  */
+#line 57 "calc.y" /* yacc.c:1906  */
 
 
 # include "lex.yy.c"
